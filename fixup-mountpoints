@@ -1283,6 +1283,28 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/oem mmcblk0p30 ' \
             "$@"
         ;;
+    "pine")
+        sed -i \
+            -e 's /dev/block/bootdevice/by-name/aboot mmcblk0p31 ' \
+            -e 's /dev/block/bootdevice/by-name/boot mmcblk0p52 ' \
+            -e 's /dev/block/bootdevice/by-name/cache mmcblk0p55 ' \
+            -e 's /dev/block/bootdevice/by-name/config mmcblk0p7 ' \
+            -e 's /dev/block/bootdevice/by-name/dsp mmcblk0p46 ' \
+            -e 's /dev/block/bootdevice/by-name/dspbak mmcblk0p47 ' \
+            -e 's /dev/block/bootdevice/by-name/misc mmcblk0p30 ' \
+            -e 's /dev/block/bootdevice/by-name/modem mmcblk0p56 ' \
+            -e 's /dev/block/bootdevice/by-name/modemst1 mmcblk0p41 ' \
+            -e 's /dev/block/bootdevice/by-name/modemst2 mmcblk0p42 ' \
+            -e 's /dev/block/bootdevice/by-name/persist mmcblk0p48 ' \
+            -e 's /dev/block/bootdevice/by-name/persistbak mmcblk0p49 ' \
+            -e 's /dev/block/bootdevice/by-name/recovery mmcblk0p53 ' \
+            -e 's /dev/block/bootdevice/by-name/rpm mmcblk0p19 ' \
+            -e 's /dev/block/bootdevice/by-name/rpmbak mmcblk0p20 ' \
+            -e 's /dev/block/bootdevice/by-name/splash mmcblk0p45 ' \
+            -e 's /dev/block/bootdevice/by-name/system mmcblk0p57 ' \
+            -e 's /dev/block/bootdevice/by-name/userdata mmcblk0p60 ' \
+            "$@"
+        ;;
     *)
         cat <<EOF
 
